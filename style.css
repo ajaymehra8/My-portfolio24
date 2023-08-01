@@ -1,0 +1,543 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: "Raleway", sans-serif;
+ overflow-x:hidden;
+  box-sizing:border-box;
+}
+
+/* NAVBAR */
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px ;
+  position: fixed;
+  width: 100vw;
+  z-index:3;
+}
+.navImg{
+  width:40px;
+  margin-left: 20px;
+  z-index:4;
+}
+ul{
+  display: flex;
+  list-style:none;
+  gap: 35px;
+  margin-right: 60px;
+  margin-top: 10px;
+}
+nav .navItems li a{
+  text-decoration: none;
+  color: #fff;
+  transition:all 0.3s;
+  position:relative;
+  z-index:1;
+  letter-spacing: 1.5px;
+}
+nav .navItems li a:hover{
+  color:  #ff6363;
+}
+/* SECTION1 */
+.section1{
+   background: url("https://s3-us-west-2.amazonaws.com/files.bradengelhardt.com/brad-bg-main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  overflow:auto;
+  
+}
+.myName{
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.myName span{
+  color: #FF6363;
+}
+
+.content{
+
+
+  display: inline-block;
+  vertical-align:center;
+  top:-100px;
+  animation: drop 1s ease forwards;
+}
+.content .typing-text{
+  margin-top: 15px;
+  display: inline;
+}
+.animePara{
+  color: white;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.downArrow{
+  display: flex;
+  justify-content: center;
+}
+.downArrow h1 a{
+  color:#FF6363;
+  text-decoration: none;
+  font-size: 70px;
+  font-weight: 700;
+   transform: rotate(90deg);
+  position:absolute;
+  bottom: 0;
+}
+/* Define the @keyframes animation */
+@keyframes upDown {
+  0%{
+    bottom:-20px;
+  }
+  50% {
+    bottom:-10px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+/* Apply the animation to an element */
+.downArrow h1 a{
+  animation: upDown .8s ease-out 1s infinite ;
+  
+}
+
+/* SLIDE BUTTONS Start*/
+
+.slideButtons{
+  position:fixed;
+  top: 43%;
+  right: 40px;
+  display: flex;
+  flex-direction:column;
+  gap:10px;
+  z-index:5;
+  
+  
+}
+.slidebtn{
+  flex-direction:row-reverse;
+}
+.slideButtons a{
+  text-decoration:none;
+  border: 1px solid black;
+  height:4px;
+  width: 4px;
+  border-radius:50%;
+  background-color: black;
+    transition: all .3s;
+
+}
+.slidebtn{
+  display: flex;
+  gap:5px;  
+  justify-content: flex-start;
+}
+.slidebtn h6{
+  font-weight: 100;
+  font-size: 8px;
+  color: white;
+  visibility: hidden;
+}
+.slidebtn a.off:hover{
+  transform:scale(1.5);
+  cursor: pointer;
+}
+
+.slidebtn a:hover + h6{
+    transition: visibility .13s;
+    visibility:visible;
+}
+.on{
+  transform:scale(2);
+}
+
+/* SLIDE BUTTONS END*/
+
+/* SECTION2 START*/
+
+#about{
+  height: 100vh;
+  width: 100vw;
+  margin-top: 20px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+.aboutHeader{
+  
+  text-align: center;
+  margin-bottom: 35px;
+}
+.aboutHeader h2{
+  color:#FF6363;
+  font-size: 40px;
+  letter-spacing:1px;
+  font-weight: 500;
+}
+.aboutHeader p{
+  max-width:1000px;
+  min-width:300px;
+  width: 65%;
+  line-height:1.5;
+  margin:auto;
+}
+
+/* SKILL BAR */
+
+.fskillBar{
+  display: flex;
+  justify-content: space-between;
+
+  border-radius:5px;
+  max-width:800px;
+  margin: auto;
+  width:90vw;
+  height: 6vh;
+  align-items:center;
+  margin-bottom: 15px;
+  background-color: #E5E5E5;
+}
+.skillContent{
+  display: flex;
+  align-items: center;
+}
+.coloured{
+  position: absolute;
+  
+  border-radius:5px 0 0 5px;
+  z-index:0;
+
+  height: 6vh;
+}
+.color1{
+  background-color: red;
+    max-width:750px;
+    min-width:130px;
+
+    width: 80vw;
+}
+.color2{
+  background-color: yellow;
+    max-width:700px;
+
+    width: 70vw;
+}
+.color3{
+  background-color: green;
+    max-width:500px;
+
+    width: 50vw;
+}
+.color4{
+  background-color: violet;
+    max-width:400px;
+
+    width: 40vw;
+}
+.color5{
+  background-color: skyblue;
+    max-width:350px;
+
+    width: 30vw;
+}
+.color6{
+  background-color: purple;
+    max-width:725px;
+    width: 72vw;
+}
+.blank{
+  position: relative;
+  background-color: black;
+  opacity: .3;
+  border-radius:5px 0 0 5px;
+  z-index:1;
+  width: 100px;
+  height: 6vh;
+}
+.skillContent p{
+  position: absolute;
+  margin-left: 20px;
+  z-index:2;
+  color: white;
+}
+.fskillBar .percent{
+  margin-right: 10px;
+}
+
+
+/* SECTION2 END*/
+
+/* SECTION3 START */
+
+
+.CardSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:40px;
+  margin-top: 30px;
+}
+
+.cards{
+  display: flex;
+  justify-content: start;
+  width:70vw;
+  max-width:500px;
+  overflow:hidden;
+}
+.cards2{
+  transition:transform .5s;
+}
+.cards2 img{
+  width: 70vw;
+  max-width:500px;
+}
+.firstCard,.cards2{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+.firstCard h2{
+  color: #ff6363;
+  letter-spacing:1px;
+  font-size:50px;
+}
+.firstCard p{
+    letter-spacing:1px;
+    font-size:20px;
+
+}
+.arrow-left,.arrow-right{
+  font-size: 120px;
+  color: #ff6363;
+  height: 150px;
+  padding:0;
+  background: none;
+  border: none;
+}
+.arrow-left:hover,.arrow-right:hover{
+  cursor: pointer;
+}
+
+/* SECTION3 END */
+
+/* SECTION4 START */
+#contact{
+  height: 100vh;
+  margin: 30px auto;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-content{
+  text-align: center;
+}
+.contact-content h2{
+   color: #ff6363;
+  font-size: 40px;
+  letter-spacing:1px;
+}
+.contact-content p{
+    font-size: 20px;
+  letter-spacing:1px;
+  max-width:800px;
+  min-width:100px;
+}
+.inputTags{
+  display: flex;
+  flex-direction:column;
+  gap:25px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.inputTags input,textarea{
+  border: 2px solid grey;
+  font-size: 20px;
+  padding:10px;
+  width:80vw;
+  max-width:700px;
+  border-radius:3%;
+}
+input[type="button"]{
+  width: 250px;
+  max-width:160px;
+  border-color:#ff6363;
+  color:#ff6363;
+  transition:all .7s;
+  padding:5px 15px;
+}
+input[type="button"]:hover{
+  cursor: pointer;
+  color: white;
+  background-color: #ff6363;
+    
+
+}
+
+/* SECTION4 END */
+
+/* FOOTER START */
+#connect{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  gap:10px;
+  height: 20vh;
+  background-color: #444444;
+  color: white;
+}
+#connect h2{
+  font-size: 25px;
+  margin-top: 10px;
+  letter-spacing:1px;
+}
+
+#connect .links a{
+  text-decoration:none;
+  color: white;
+  font-size: 25px;
+  margin-right: 10px;
+  transition:all .5s;
+}
+#connect .links a:hover{
+  color: #ff6363;
+}
+
+
+/* FOOTER END */
+
+
+/*??????????? ANIMATION START  ??????????????*/
+.typing-text {
+  font-size: 16px;
+  border-right: 3px solid #333; /* The cursor will be simulated using a border */
+  padding-right: 10px; /* Add some padding to the right of the text for the cursor effect */ 
+  margin-top: 10px;
+  color: white;
+}
+
+@keyframes drop{
+  0%{opacity:0;}
+  100%{transform:translateY(200px);
+  opacity:1;}
+}
+#about{
+}
+.aboutHeader{
+   
+ margin-top: 20px;
+  
+/*   font-size: 0; */
+ 
+ 
+}
+@keyframes drop2{
+  0%{opacity:0;
+  font-size: 0;}
+  100%{
+  opacity:1;
+}
+}
+.toggleBtn{
+  padding: 0;
+  border: none;
+  background: none;
+  position: absolute;
+  right:80px;
+  z-index:3;
+   display: none;
+}
+.toggler{
+  color: #ff6363;
+  font-size: 35px;
+  z-index:3;
+ 
+}
+.toggler:hover{
+cursor: pointer;
+}
+
+/* MEDIA QUERY */
+
+@media(max-width:400px){
+  .blank{
+    display: none;
+  }
+  .skillContent .skill{
+    color:black;
+    font-weight: bold;
+  }
+  .color1{
+    width:70vw;
+  }
+  .color2{
+    width: 60vw;
+  }
+ul{
+  flex-direction:column;
+  background: black;
+  align-items: center;
+/*   justify-content: center; */
+  width: 100vw;
+  height: 100vh;
+  margin-top: 0;
+  margin-right: -10px;
+  list-style:none;
+  gap: 35px;
+  padding-top: 110px;
+ position: absolute;
+  right: -100%;
+  top: 0;
+  transition:right .7s;
+
+}
+  ul li a{
+    font-size: 40px;
+  }
+  .toggleBtn{
+    display: inherit;
+  }
+  .aboutHeader h2{
+    font-size: 30px;
+  }
+  .aboutHeader p{
+   font-size: 12px;
+  }
+  .contact-content h2{
+    font-size: 30px;
+  }
+  .contact-content p{
+    font-size: 12px;
+  }
+  #portfolio{
+    display: none;
+  }
+  .open{
+  position: absolute;
+right:0;
+  width: 120vw;
+ 
+}
+  .slideButtons{
+    display: none;
+  }
+  #connect h2{
+    font-size: 20px;
+  }
+  #connect links a{
+    font-size: 12px;
+  }
+}
+
